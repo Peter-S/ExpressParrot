@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  form
+    label(for='name') Name: 
+    input(type='text', name='name')
+    br
+    label(for='fave') Favorite Things:  
+    input(type='text', name='fave')
+    br
+    button(type='submit') Submit
+  
+  if name
+    if fave
+      p #{name}'s favorite thing is #{fave}
